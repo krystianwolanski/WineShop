@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+
+  <title>WineShop</title>
+  <meta name="description" content="Sklep z winem">
+  <meta name="author" content="Krystian Wolański">
+  
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'polls/product_style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0b0b03f380.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header>
+       
+            <a href="{% url 'polls:index'%}"><img class="logo" height=60 src="{% static 'polls/img/logo.png' %}"></a>
+            <div class="right-items">
+                <h3>Account</h3>
+                 <a href="{% url 'polls:order'%}"><img class="basket" height= 30 src="{% static 'polls/img/basket.png' %}"></a>
+            </div>
+       
+    </header>
+    <main class="container">
+        <img height= 350 src="{{product.image.url}}">
+        <div class="description">
+            <h2>{{product.name}}</h2>
+            <p>700ml</p>
+            <p>{{product.description}}</p>
+            <h2 class="price">{{product.price}} zł</h2>
+            <a href="{{product.get_add_to_cart_url}}"><button class="dropbtn">Dodaj do koszyka</button></a>
+        </div>
+    </main>
+</body>
+</html>

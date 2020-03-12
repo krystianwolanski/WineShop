@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+
+  <title>WineShop</title>
+  <meta name="description" content="Sklep z winem">
+  <meta name="author" content="Krystian Wolański">
+  
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'polls/shopping_cart_style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0b0b03f380.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header>
+       
+            <a href="{% url 'polls:index'%}"><img class="logo" height=60 src="{% static 'polls/img/logo.png' %}"></a>
+            <div class="right-items">
+                <h3>Account</h3>
+                <a href="{% url 'polls:order'%}"><img class="basket" height= 30 src="{% static 'polls/img/basket.png' %}"></a>
+            </div>
+       
+    </header>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Produkt</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th>Suma</th>
+            </tr>
+            
+            {% for order in order_list %}
+                <tr>
+                    <td align=center><img height = 140 align = "center" src="{{order.item.image.url}}">{{order.item.name}}</td>
+                    <td>{{order.item.price}}zł</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.multiplication}}zł</td>
+                    <td><a href="{% url 'polls:deleteOrder' order.pk%}"><button class="usunbtn">Usuń</button></a></td>
+                </tr>
+        
+            {% endfor %}
+
+        </table>
+        <div class="order_summary">
+            <div class="summary">
+                <h2>Podsumowanie</h2>
+                <div class="cena_produktow"><p>Cena produktów:</p><p>{{total}}zł</p></div>
+                <div class="cena_produktow"><p>Dostawa:</p><p>0zł</p></div>
+                <div class="cena_produktow"><p>Razem:</p><p>{{total}}zł</p></div>
+            </div>
+            <button class="dropbtn">Zamów</button>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>

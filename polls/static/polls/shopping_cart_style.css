@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    background-color:#5A0F0F;
+    height: 65px;
+    position: sticky;
+    width: 100%;
+    top:0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    
+    
+}
+.logo{
+    margin-left: 80px;
+}
+
+.right-items{
+    color: white;
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.basket{
+   margin-left: 11px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+   margin-top:50px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 55%;
+
+    
+
+  }
+ 
+th{
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+    padding: 0px 30px;
+}
+th:nth-child(1){
+    text-align: left;
+    padding: 0;
+}
+td{
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    text-align: left;
+    padding: 30px 0;
+  }
+td:first-child img{
+  margin-right: 30px;
+}
+td:nth-child(2){
+    text-align: center;
+}
+td:nth-child(3){
+    text-align: center;
+}
+td:nth-child(4){
+    text-align: center;
+}
+.order_summary{
+    width: 30%;
+    margin-left: 40px;
+}
+.summary{
+    font-size: 1.4rem;
+    height: 330px;
+    background-color: #F8F6EE;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border: none;
+}
+.summary p, h2{
+    padding: 10px 30px;
+}
+.summary h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.dropbtn {
+    margin-top:15px;
+    background-color: #509450;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    
+    
+  }
+  .cena_produktow{
+      display: flex;
+  }
+  .usunbtn{
+    background-color: #E3D290;
+    color: white;
+    padding: 8px 0px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
