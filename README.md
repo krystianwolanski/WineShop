@@ -2,7 +2,7 @@
 WineShop - Django
 
 <p>
-<img src="photo1.png">
+<img src="photo1.PNG">
 </p>
 <p>
 <img src="photo2.png">
