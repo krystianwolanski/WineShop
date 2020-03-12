@@ -5,8 +5,8 @@ WineShop - Django
 <img src="photo1.PNG">
 </p>
 <p>
-<img src="photo2.png">
+<img src="photo2.PNG">
 </p>
 <p>
-<img src="photo3.png">
+<img src="photo3.PNG">
 </p>
